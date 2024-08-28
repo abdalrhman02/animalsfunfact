@@ -1,38 +1,93 @@
-.App {
+*{margin:0; padding:0; font-family: sans-serif;}
+
+body {
+  background: linear-gradient(45deg , rgb(25, 37, 75) , rgb(58, 74, 124));
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.title {
   text-align: center;
+  padding-top:3em;
+  color: #FFF
+}
+.title h1 {
+  font-size: 4em;
+}
+.title p {
+  font-size: 18px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.animals {
+  margin-top: 2em;
+  padding: 2em 4em;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 4em 5em;
+  width: 55%;
+}
+.animals .an {
+  background-color: rgb(66, 75, 105);
+  width: 7.5em;
+  height: 7.5em;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0px 2px 5px 0px white;
+  /* overflow: hidden; */
+  position: relative;
+  transition: 0.3s
+}
+.animals .an:hover{
+  cursor: pointer;
+  background-color: rgb(33, 37, 53);
+  overflow:visible
+}
+.animals .an:hover img {
+  transform: scale(1.1) translateX(-45%);
+}
+.animals .an h3 {
+  width: 6em;
+  color: #fff;
+  font-size: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.animals .an img {
+  width: 85px;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  transition: 0.3s
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result {
+  text-align: center;
+  padding: 5em 0 4em;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  position: fixed;
+  right: 0;
+}
+.result img {
+  width: 12em
+}
+.result .fact {
+  color: #FFF;
+  margin-top: 20px;
+  font-size: 25px;
+  max-width: 500px;
 }
